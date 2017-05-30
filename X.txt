@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CSharp_BASICS___MORE_EXERCISES
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+
+            int middleSpaces = n - 2;
+            int endSpaces = 0;
+
+            for (int i = 1; i <= n / 2; i++)
+            {
+                Console.WriteLine(new string(' ', endSpaces) + "x" + new string(' ', middleSpaces - endSpaces) + "x");
+                middleSpaces--;
+                endSpaces++;
+            }
+
+            Console.WriteLine(new string(' ', (int)(n / 2)) + "x");
+
+
+            middleSpaces = 1;
+            endSpaces = n / 2 - 1;
+            for (int i = 1; i <= n / 2; i++)
+            {
+                Console.WriteLine(new string(' ', endSpaces) + "x" + new string(' ', middleSpaces) + "x");
+                middleSpaces += 2;
+                endSpaces--;
+            }
+        }
+    }
+}
