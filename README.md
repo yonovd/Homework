@@ -1,2 +1,2 @@
 # Homework
-Repo made for excerciese
+Repo made for excerciese - SoftUni
