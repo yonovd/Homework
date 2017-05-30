@@ -1,0 +1,127 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _02.VaporStore
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double currentBalance = double.Parse(Console.ReadLine());
+            double totalSpent = 0.0;
+            double remainingMoney = currentBalance;
+            double gamePrice = 0.0;
+
+            while (true)
+            {
+                string game = Console.ReadLine();
+
+
+                if (game == "OutFall 4")
+                {
+                    gamePrice = 39.99;
+                    if (gamePrice > remainingMoney)
+                    {
+                        Console.WriteLine("Too Expensive");
+                    }
+                    else
+                    {
+                        remainingMoney -= gamePrice;
+                        totalSpent += gamePrice;
+                        Console.WriteLine("Bought OutFall 4");
+                    }
+
+                }
+                else if (game == "CS: OG")
+                {
+                    gamePrice = 15.99;
+                    if (gamePrice > remainingMoney)
+                    {
+                        Console.WriteLine("Too Expensive");
+                    }
+                    else
+                    {
+                        remainingMoney -= gamePrice;
+                        totalSpent += gamePrice;
+                        Console.WriteLine("Bought CS: OG");
+                    }
+                }
+                else if (game == "Zplinter Zell")
+                {
+                    gamePrice = 19.99;
+                    if (gamePrice > remainingMoney)
+                    {
+                        Console.WriteLine("Too Expensive");
+                    }
+                    else
+                    {
+                        remainingMoney -= gamePrice;
+                        totalSpent += gamePrice;
+                        Console.WriteLine("Bought Zplinter Zell");
+                    }
+                }
+                else if (game == "Honored 2")
+                {
+                    gamePrice = 59.99;
+                    if (gamePrice > remainingMoney)
+                    {
+                        Console.WriteLine("Too Expensive");
+                    }
+                    else
+                    {
+                        remainingMoney -= gamePrice;
+                        totalSpent += gamePrice;
+                        Console.WriteLine("Bought Honored 2");
+                    }
+                }
+                else if (game == "RoverWatch")
+                {
+                    gamePrice = 29.99;
+                    if (gamePrice > remainingMoney)
+                    {
+                        Console.WriteLine("Too Expensive");
+                    }
+                    else
+                    {
+                        remainingMoney -= gamePrice;
+                        totalSpent += gamePrice;
+                        Console.WriteLine("Bought RoverWatch");
+                    }
+                }
+                else if (game == "RoverWatch Origins Edition")
+                {
+                    gamePrice = 39.99;
+                    if (gamePrice > remainingMoney)
+                    {
+                        Console.WriteLine("Too Expensive");
+                    }
+                    else
+                    {
+                        remainingMoney -= gamePrice;
+                        totalSpent += gamePrice;
+                        Console.WriteLine("Bought RoverWatch Origins Edition");
+                    }
+                }
+                else if (game == "Game Time")
+                {
+                    Console.WriteLine($"Total spent: ${totalSpent:f2}. Remaining: ${remainingMoney:f2}");
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Not Found");
+                }
+
+                if (remainingMoney <= 0)
+                {
+                    Console.WriteLine("Out of money!");
+                }
+
+
+            }
+        }
+    }
+}
