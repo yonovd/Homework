@@ -4,5 +4,5 @@ The conflict was resolved!
 Edited again in master branch!
 Edited again.
 changes with main branch
-SoftUni
+SoftUni - Homework
 
